@@ -286,7 +286,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'piSLY-zsqD3Pw-GHYU9_j2K9Mawh2Rs51nK2zTRNl-6KOoR4cA-6AJ5A3BMFPimLYNUKcugPog';
+$settings['hash_salt'] = 'J36jFEv8S_4MHHnlCdvSLzeduhHLbIGT0VyABwftf7M1nScqmqPGtxQXeenRoby4wne5bV5mow';
 
 /**
  * Deployment identifier.
@@ -882,10 +882,15 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'sites/default/files/.ht.sqlite',
+  'database' => 'drupaldb',
+  'username' => 'dbadmin',
+  'password' => 'redhat123',
   'prefix' => '',
-  'driver' => 'sqlite',
-  'namespace' => 'Drupal\\sqlite\\Driver\\Database\\sqlite',
-  'autoload' => 'core/modules/sqlite/src/Driver/Database/sqlite/',
+  'host' => 'mysql',
+  'port' => '3306',
+  'isolation_level' => 'READ COMMITTED',
+  'driver' => 'mysql',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_z8YMAaXXVKGs87gmlkU6J5VT7F9LEOv2XZFrdS5SCD5QwPW1EIWQimPTa8CzRpUC8XxDOZnECQ/sync';
+$settings['config_sync_directory'] = 'sites/default/files/config_oUTN3nkJJiXE3KaTAG_AxS5IzIZnFBecSJlN55w984I54MQWsbnWtE_ai2SQHzcCjAX8Z1wu5A/sync';
