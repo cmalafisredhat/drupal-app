@@ -3,3 +3,4 @@
 FROM quay.io/cmalafis/drupal:v4
 RUN cp sites/default/default.settings.php sites/default/settings.php
 RUN chmod 666 sites/default/settings.php
+COPY composer.json .
