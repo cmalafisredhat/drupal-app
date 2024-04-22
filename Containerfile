@@ -4,4 +4,4 @@ FROM quay.io/cmalafis/drupal:v4
 #COPY src .
 RUN cp sites/default/default.settings.php sites/default/settings.php
 RUN chmod 666 sites/default/settings.php
-COPY htdocs private /www/var/html
+RUN cp -R htdocs private /www/var/html
